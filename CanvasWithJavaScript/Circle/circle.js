@@ -1,7 +1,7 @@
 const canvas = document.getElementById("myCanvas");
 const context = canvas.getContext("2d");
 
-// Kích thước canvas bằng với kích thước màn hình
+// Thiết lập kích thước canvas
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -9,7 +9,7 @@ let x = canvas.width / 2;
 let y = canvas.height / 2;
 let radius = 1; // Bán kính ban đầu
 let maxRadius = 100; // Bán kính tối đa
-let speed = 0.5; // Tốc độ tăng
+let speed = 1; // Tốc độ tăng
 let growing = true; // Trạng thái phóng to hay thu nhỏ
 
 function draw() {
@@ -25,14 +25,25 @@ function draw() {
     radius += speed;
     if (radius >= maxRadius) {
       growing = false;
-      radius = 10;
+      radius = 1;
     }
   } else {
-    radius -= speed;
-    if (radius <= 10) growing = true;
+    growing = true;
   }
 
-  requestAnimationFrame(draw); // Lặp lại animation
+  requestAnimationFrame(draw);
+
+  // Cập nhật kích thước mỗi giây
+  // setInterval(() => {
+  //   if (growing) {
+  //     radius += 1;
+  //     if (radius >= maxRadius) growing = false;
+  //   } else {
+  //     radius -= 1;
+  //     if (radius <= initialRadius) growing = true;
+  //   }
+  //   draw();
+  // }, 1000);
 }
 
 draw();
