@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 const AnimatedCircle = () => {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -44,7 +44,7 @@ const AnimatedCircle = () => {
   }, []);
 
   return (
-    <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
+    <><canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" /></>
   );
 };
 
