@@ -8,7 +8,7 @@ canvas.height = window.innerHeight;
 let x = canvas.width / 2;
 let y = canvas.height / 2;
 let radius = 1; // Bán kính ban đầu
-let maxRadius = 100; // Bán kính tối đa
+let maxRadius = 150; // Bán kính tối đa
 let speed = 1; // Tốc độ tăng
 let growing = true; // Trạng thái phóng to hay thu nhỏ
 
@@ -33,7 +33,7 @@ function draw() {
 
   requestAnimationFrame(draw);
 
-  // Cập nhật kích thước mỗi giây
+  // C2
   // setInterval(() => {
   //   if (growing) {
   //     radius += 1;
