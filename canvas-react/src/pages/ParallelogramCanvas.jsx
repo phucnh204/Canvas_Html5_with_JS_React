@@ -12,7 +12,6 @@ const ParallelogramCanvas = () => {
   const speed = 3;
   const skewX = 150; // Độ nghiêng
   const angle = 20 * (Math.PI / 180); // Góc xoay (20 độ)
-
   // Danh sách màu gradient
   const colors = ['red', 'violet', 'blue', 'green', 'purple', 'orange'];
 
@@ -24,7 +23,6 @@ const ParallelogramCanvas = () => {
 
     const drawParallelogram = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Lưu trạng thái gốc của canvas
       ctx.save();
       ctx.translate(100, 50);
